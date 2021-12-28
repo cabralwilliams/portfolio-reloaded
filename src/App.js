@@ -5,19 +5,21 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ContactForm from './components/Contact';
 import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
 import { useState } from 'react';
 
 function App() {
-  const appOptions = [
+  const [selectedLink, setSelectedLink] = useState('about');
 
-  ]
-  const [selected, setSelected] = useState("about");
   return (
     <div className="App">
-      <Header selected={selected}/>
+      <Header selectedLink={selectedLink} setSelectedLink={setSelectedLink} />
       <main className='site-content'>
-        <About />
-        <ContactForm />
+        {selectedLink === 'about' && <About />}
+        {selectedLink === 'portfolio' && <Portfolio />}
+        {selectedLink === 'contact' && <ContactForm />}
+        {selectedLink === 'resume' && <Resume />}
       </main>
       <Footer />
     </div>

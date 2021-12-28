@@ -8,7 +8,7 @@ function Header(props) {
         <header>
             <Reloaded />
             <h2 className="tnr" id="site-title">Portfolio Reloaded</h2>
-            <Navigation />
+            <Navigation selectedLink={props.selectedLink} setSelectedLink={props.setSelectedLink} />
         </header>
     );
 }

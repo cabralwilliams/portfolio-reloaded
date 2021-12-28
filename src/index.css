@@ -53,12 +53,76 @@ header {
 
 .flex-row {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flex-title {
+    flex: 0 1 18%;
+    color: var(--bgBlackish);
+    text-shadow: 1px 1px #000;
+}
+
+.flex-content {
+    flex: 0 3 72%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-row-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-row-links a {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+}
+
+.flex-row-links a:nth-child(odd) {
+    color: var(--blue-pill);
+}
+
+.flex-row-links a:nth-child(even) {
+    color: var(--red-pill);
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.flex-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 40%;
+    margin-bottom: 20px;
+}
+
+.flex-project h3 {
+    color: var(--bgBlackish);
+    font-size: 24px;
+    text-shadow: 1px 1px #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.flex-image {
+    box-shadow: 0 0 7px var(--bgBlackish);
+}
+
+.flex-image img {
+    max-width: 450px;
+}
+
+.flex-column-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 1 40%;
 }
 
 #main-ul {
@@ -91,6 +155,12 @@ header {
 
 .site-content {
     background-color: var(--site-grey);
+}
+
+p {
+    color: var(--bgBlackish);
+    font-size: 20px;
+    font-weight: 600;
 }
 
 label {
