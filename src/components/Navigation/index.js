@@ -29,6 +29,7 @@ function Navigation(props) {
     const [links, setLinks] = useState(siteLinks);
 
     function updateLinks(event) {
+        event.preventDefault();
         if(event.target.matches('a')) {
             const linkname = event.target.getAttribute('href').substring(1);
             console.log(linkname);

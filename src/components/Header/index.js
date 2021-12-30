@@ -3,7 +3,7 @@ import Navigation from '../Navigation';
 import Reloaded from "../Reloaded";
 
 function Header(props) {
-
+    
     return(
         <header>
             <Reloaded />

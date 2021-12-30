@@ -27,6 +27,7 @@ code {
     justify-content: space-between;
 }
 
+/*Header Component Styles*/
 header {
     background-color: var(--bgBlackish);
     display: flex;
@@ -50,6 +51,7 @@ header {
 #site-nav {
     flex: 1 1 30%;
 }
+/*End Header Component*/
 
 .flex-row {
     display: flex;
@@ -57,6 +59,7 @@ header {
     justify-content: space-evenly;
 }
 
+/*Content Components (About, Portfolio, Contact, Resume) Shared Styling*/
 .flex-title {
     flex: 0 1 18%;
     color: var(--bgBlackish);
@@ -68,6 +71,7 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
+/*End Content Components*/
 
 .flex-row-links {
     display: flex;
@@ -95,6 +99,7 @@ header {
     align-items: center;
 }
 
+/*Project Component Settings*/
 .flex-project {
     display: flex;
     flex-direction: column;
@@ -117,12 +122,20 @@ header {
 .flex-image img {
     max-width: 450px;
 }
+/*End Project Component Settings*/
 
 .flex-column-left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     flex: 0 1 40%;
+}
+
+.flex-column-start-left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 3 72%;
 }
 
 #main-ul {
@@ -163,22 +176,24 @@ p {
     font-weight: 600;
 }
 
+/*Contact Component Styles*/
 label {
     color: var(--red-pill);
     text-shadow: 0.5px 0.5px #000;
     font-family: 'Times New Roman', Times, serif;
-    margin-right: 10px;
+    margin-bottom: 7px;
 }
 
 form div {
     display: flex;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
-.width200 {
-    width: 200px;
+.width300 {
+    width: 300px;
 }
 
 textarea {
@@ -191,6 +206,7 @@ button {
     padding: 5px 15px;
     border-radius: 10%;
 }
+/*End Contact Component*/
 
 .reload-footer {
     width: 55px;
@@ -210,6 +226,36 @@ footer {
     align-items: center;
 }
 
+.red-pill-font {
+    color: var(--red-pill);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.width60 {
+    width: 60px;
+}
+
+.logo1 {
+    width: 60px;
+}
+
+.logo2 {
+    width: 200px;
+}
+
+#logo-div div {
+    padding: 20px;
+}
+
+.a-no-decor {
+    text-decoration: none;
+    text-shadow: 1px 1px var(--bgBlackish);
+}
+
+.avatar-dim {
+    height: 160px;
+}
 
 @media screen and(max-width: 768px) {
     header {
@@ -222,9 +268,24 @@ footer {
 
     #site-title {
         flex: 0 1 100%;
+        text-align: center;
     }
 
     #site-nav {
         flex: 0 1 100%;
+    }
+
+    .logo1 {
+        width: 40px;
+    }
+
+    .logo2 {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .flex-image img {
+        max-width: 350px;
     }
 }

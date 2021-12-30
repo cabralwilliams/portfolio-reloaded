@@ -4,13 +4,13 @@ const lineWidth = 0.5;
 const opacity = 0.7;
 
 function GreenCode(props) {
-    const [display, setDisplay] = useState([true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]);
+    const newDisplay = [];
+    for(let i = 0; i < 22; i++) {
+        newDisplay.push(Math.random() < 0.6 ? true : false);
+    }
+    const [display, setDisplay] = useState(newDisplay);
     const translate = `translate(${props.translateX}, ${props.translateY})`;
     
-    setInterval(() => {
-        let newDisplay = display.map(val => Math.random() < 0.6 ? true : false);
-        setDisplay(newDisplay);
-    }, 600);
     return(
         <g transform={translate}>
             {display[0] && <line x1={-2} y1={0} x2={0} y2={0} stroke={lineColor} strokeWidth={lineWidth} opacity={opacity} />}
