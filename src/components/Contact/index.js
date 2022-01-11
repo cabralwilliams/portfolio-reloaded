@@ -4,7 +4,7 @@ function ContactForm(props) {
 
     function validateInfo(event) {
         if(event.target.getAttribute('name') === 'email') {
-            if(!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,5}$/.test(event.target.value.trim())) {
+            if(!/^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/.test(event.target.value.trim())) {
                 document.querySelector('#errorMessage').textContent = 'Invalid email address - please try again.';
             } else {
                 document.querySelector('#errorMessage').textContent = '';
@@ -20,7 +20,7 @@ function ContactForm(props) {
         }
     }
     return(
-        <div className="flex-row" id="contact">
+        <div className="flex-row row-to-column" id="contact">
             <h2 className="flex-title">Contact</h2>
             <form className="flex-column-start-left" id="flex-contact">
                 <div>
@@ -29,11 +29,11 @@ function ContactForm(props) {
                 </div>
                 <div>
                     <label htmlFor="email">Email: </label>
-                    <input type="email" name="email" className="width300" onBlur={validateInfo} required/>
+                    <input type="email" name="email" placeholder="Your Email" className="width300" onBlur={validateInfo} required/>
                 </div>
                 <div>
                     <label htmlFor="message">Message: </label>
-                    <textarea name="message" className="width300" onBlur={validateInfo} required></textarea>
+                    <textarea name="message" placeholder="There is no spoon..." className="width300" onBlur={validateInfo} required></textarea>
                 </div>
                 <div id="errorMessage" className="red-pill-font"></div>
                 <div>

@@ -68,7 +68,7 @@ function Portfolio(props) {
         }
     ];
     return(
-        <div className="flex-row" id="portfolio">
+        <div className="flex-row row-to-column" id="portfolio">
             <h2 className="flex-title">Portfolio</h2>
             <div className="flex-row flex-content">
                 {projects.map((project, i) => (

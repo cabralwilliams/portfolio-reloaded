@@ -5,11 +5,20 @@ const opacity = 0.7;
 
 function GreenCode(props) {
     const newDisplay = [];
+    const translate = `translate(${props.translateX}, ${props.translateY})`;
     for(let i = 0; i < 22; i++) {
         newDisplay.push(Math.random() < 0.6 ? true : false);
     }
     const [display, setDisplay] = useState(newDisplay);
-    const translate = `translate(${props.translateX}, ${props.translateY})`;
+    const [codeCountdown, setCodeCountdown] = useState(4);
+    
+    if(codeCountdown > 0) {
+        setTimeout(() => {
+            let temp = newDisplay.map(() => Math.random() < 0.6);
+            setDisplay(temp);
+            setCodeCountdown(codeCountdown - 1);
+        },250);
+    }
     
     return(
         <g transform={translate}>
