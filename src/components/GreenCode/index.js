@@ -10,7 +10,7 @@ function GreenCode(props) {
         newDisplay.push(Math.random() < 0.6 ? true : false);
     }
     const [display, setDisplay] = useState(newDisplay);
-    const [codeCountdown, setCodeCountdown] = useState(4);
+    const [codeCountdown, setCodeCountdown] = useState(12);
     
     if(codeCountdown > 0) {
         setTimeout(() => {
