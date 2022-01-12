@@ -12,7 +12,7 @@ function GreenCode(props) {
         newDisplay.push(Math.random() < 0.6 ? true : false);
     }
     const [display, setDisplay] = useState(newDisplay);
-    const [codeCountdown, setCodeCountdown] = useState(12);
+    const [codeCountdown, setCodeCountdown] = useState(8);
     
     //Only change the display state of the GreenCode lines if the codeCountdown is greater than zero
     if(codeCountdown > 0) {
