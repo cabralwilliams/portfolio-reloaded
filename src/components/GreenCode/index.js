@@ -4,7 +4,9 @@ const lineWidth = 0.5;
 const opacity = 0.7;
 
 function GreenCode(props) {
+    //newDisplay sets the initial display state of the GreenCode lines
     const newDisplay = [];
+    //Translate each of the GreenCode blocks to the proper position based on props
     const translate = `translate(${props.translateX}, ${props.translateY})`;
     for(let i = 0; i < 22; i++) {
         newDisplay.push(Math.random() < 0.6 ? true : false);
@@ -12,6 +14,7 @@ function GreenCode(props) {
     const [display, setDisplay] = useState(newDisplay);
     const [codeCountdown, setCodeCountdown] = useState(12);
     
+    //Only change the display state of the GreenCode lines if the codeCountdown is greater than zero
     if(codeCountdown > 0) {
         setTimeout(() => {
             let temp = newDisplay.map(() => Math.random() < 0.6);

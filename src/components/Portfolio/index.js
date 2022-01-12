@@ -29,6 +29,7 @@ https://cabralwilliams.github.io/some-things-math/
 */
 
 function Portfolio(props) {
+    //project array whose objects' values will be passed as props to the imported Project component
     const projects = [
         {
             imagealt: 'Tech Ticket System landing page',

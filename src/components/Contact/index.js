@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 function ContactForm(props) {
 
+    //Function provides form validation information - it will create a message if the onBlur event is triggered on any of the fields and the proper format is not satisfied
+    //The error message will display until that error is fixed or a new error is made
     function validateInfo(event) {
         if(event.target.getAttribute('name') === 'email') {
             if(!/^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/.test(event.target.value.trim())) {

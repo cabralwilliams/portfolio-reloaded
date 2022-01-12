@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function Navigation(props) {
+    //List of site links - the about me link is set to display by default
     const siteLinks = [
         {
             name: "About Me",
@@ -28,6 +29,8 @@ function Navigation(props) {
 
     const [links, setLinks] = useState(siteLinks);
 
+    //function to update the current active link so that it will be rendered in red rather than in blue
+    //by setting the active link, this also allows the information to be passed back up the component tree so that App.js knows which component page to render
     function updateLinks(event) {
         event.preventDefault();
         if(event.target.matches('a')) {

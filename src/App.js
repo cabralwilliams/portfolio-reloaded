@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Reloaded from './components/Reloaded';
+//import Reloaded from './components/Reloaded';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ContactForm from './components/Contact';
