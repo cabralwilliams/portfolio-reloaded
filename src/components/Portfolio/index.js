@@ -32,6 +32,12 @@ function Portfolio(props) {
     //project array whose objects' values will be passed as props to the imported Project component
     const projects = [
         {
+            imagealt: 'The Missing One landing page',
+            projecttitle: 'The Missing One',
+            githubrepo: 'https://github.com/cabralwilliams/the-missing-one',
+            livelink: 'https://lit-scrubland-68499.herokuapp.com/'
+        },
+        {
             imagealt: 'Tech Ticket System landing page',
             projecttitle: 'Tech Ticket System',
             githubrepo: 'https://github.com/rprice000/tech_ticket_system',
