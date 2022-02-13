@@ -72,6 +72,12 @@ function Portfolio(props) {
             projecttitle: 'Some Things Math',
             githubrepo: 'https://github.com/cabralwilliams/some-things-math',
             livelink: 'https://cabralwilliams.github.io/some-things-math/'
+        },
+        {
+            imagealt: 'Page to enter a comment on a post',
+            projecttitle: 'Python Social',
+            githubrepo: 'https://github.com/cabralwilliams/python-social',
+            livelink: 'https://slithering-python-social-7.herokuapp.com/'
         }
     ];
     return(

@@ -27,6 +27,7 @@ function Resume(props) {
                             <li>Express</li>
                             <li>MySQL</li>
                             <li>MongoDB</li>
+                            <li>Flask</li>
                         </ul>
                     </div>
                 </div>
